@@ -11,32 +11,37 @@ export class ColorPickerComponent {
   @Output() event: EventEmitter<string> = new EventEmitter<string>();
 
   public show = false;
+  public colorProfileFolderPath = "Color";
+  public colorProfileFileConfig = "";
+  public BASE_URL = "https://github.com/gauravghongde/social-icons/blob/master/SVG/"+this.colorProfileFolderPath+"/";
+  public FILE_CONFIG = this.colorProfileFileConfig +".svg?raw=true";
   public defaultColors: string[] = [
-    '#ffffff',
-    '#000105',
-    '#3e6158',
-    '#3f7a89',
-    '#96c582',
-    '#b7d5c4',
-    '#bcd6e7',
-    '#7c90c1',
-    '#9d8594',
-    '#dad0d8',
-    '#4b4fce',
-    '#4e0a77',
-    '#a367b5',
-    '#ee3e6d',
-    '#d63d62',
-    '#c6a670',
-    '#f46600',
-    '#cf0500',
-    '#efabbd',
-    '#8e0622',
-    '#f0b89a',
-    '#f0ca68',
-    '#62382f',
-    '#c97545',
-    '#c1800b'
+    'Github', 
+    // 'GitLab', 
+    'Facebook', 
+    'Instagram', 
+    'Snapchat', 
+    'Twitter', 
+    'Google', 
+    'Gmail', 
+    'Medium',
+    'Youtube', 
+    // 'Blogger', 
+    'Twitch', 
+    'WhatsApp', 
+    'Telegram', 
+    'LinkedIN', 
+    'Pinterest', 
+    'Medium', 
+    'Behance',
+    'Dribbble', 
+    'Quora', 
+    'Reddit', 
+    'Skype', 
+    // 'StackOverflow', 
+    'Wordpress', 
+    'PayPal', 
+    'Folio'
   ];
 
   constructor() {
@@ -71,5 +76,19 @@ export class ColorPickerComponent {
    */
   public toggleColors(): void {
     this.show = !this.show;
+  }
+
+  public bwClicked(): void {
+    this.BASE_URL = "https://github.com/gauravghongde/social-icons/blob/master/SVG/Black/";
+    this.FILE_CONFIG = "_black.svg?raw=true";
+    console.log(this.BASE_URL);
+    console.log(this.FILE_CONFIG);
+  }
+
+  public colorClicked(): void {
+    this.BASE_URL = "https://github.com/gauravghongde/social-icons/blob/master/SVG/Color/";
+    this.FILE_CONFIG = ".svg?raw=true";
+    console.log(this.BASE_URL);
+    console.log(this.FILE_CONFIG);
   }
 }

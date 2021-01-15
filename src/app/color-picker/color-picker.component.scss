@@ -3,7 +3,6 @@
   .summary-info {
     box-shadow: 0 7px 13px 0 rgba(86, 95, 102, 0.07);
     background: #fff;
-    max-width: 240px;
     padding: 15px;
     border-radius: $radius;
     display: flex;
@@ -38,11 +37,10 @@
   .opened {
     box-shadow: 0 7px 13px 0 rgba(86, 95, 102, 0.07);
     background: #fff;
-    max-width: 240px;
     padding: 15px;
     border-radius: $radius;
     position: relative;
-    margin-top: 15px;
+    margin: 5px;
     &:after {
       border: 10px solid transparent;
       border-bottom: 10px solid #fff;
@@ -58,12 +56,7 @@
 
       .circle {
         flex: 40px 0 0;
-        margin-right: 10px;
-        margin-bottom: 10px;
-
-        &:nth-child(5n) {
-          margin-right: 0;
-        }
+        margin: 5px;
       }
     }
 
@@ -104,4 +97,27 @@
 
     }
   }
+}
+
+.icon {
+  height: 40px;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.bottom-opened {
+  display: flex;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.btn {
+  margin: 0.5rem;
+  width: 100%;
+}
+
+.wh-100 {
+  height: 100vh;
+  width: 100vw;
 }

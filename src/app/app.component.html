@@ -1,21 +1,21 @@
 <div class="app">
-  <div class="container main-content">
-    <div class="sidebar">
-      <div class="picker">
-        <app-color-picker [color]="backgroundColor" [heading]="'Background'"
-                          (event)="setColor('background', $event)"></app-color-picker>
+  <div class="container wh-100 main-content">
+    <div class="sidebar wh-100">
+      <div class="picker wh-100">
+        <app-color-picker [color]="backgroundColor" [heading]="'Background'" (event)="setColor('background', $event)">
+        </app-color-picker>
       </div>
 
-      <div class="picker">
+      <!-- <div class="picker">
         <app-color-picker [color]="fontColor" [heading]="'Font'" (event)="setColor('font', $event)"></app-color-picker>
       </div>
 
       <div class="picker">
         <app-color-picker [color]="linkColor" [heading]="'Links'" (event)="setColor('link', $event)"></app-color-picker>
-      </div>
+      </div> -->
     </div>
 
-    <div class="content">
+    <!-- <div class="content">
       <div class="background" [ngStyle]="{background: backgroundColor}">
         <p [ngStyle]="{color: fontColor}">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
           eirmod tempor invidunt ut labore et
@@ -34,6 +34,6 @@
           Go to Color Picker Article
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
